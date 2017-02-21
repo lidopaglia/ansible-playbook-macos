@@ -1,0 +1,84 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_terminal: yes
+configure_macos: yes
+
+dotfiles_repo: https://github.com/lidopaglia/dotfiles.git
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/.dotfiles
+dotfiles_files:
+  - .gitconfig
+  - .gitignore
+  - .macos
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - autoconf
+  - bash-completion
+  - chromedriver
+  - doxygen
+  - gettext
+  - git
+  - go
+  - gpg
+  - htop
+  - hub
+  - httpie
+  - iperf
+  - libdvdcss
+  - libevent
+  - packer
+  - python
+  - sqlite
+  - mcrypt
+  - mysql
+  - nmap
+  - npm
+  - nvm
+  - ssh-copy-id
+  - cowsay
+  - readline
+  - openssl
+  - pv
+  - wget
+
+homebrew_taps:
+  - homebrew/core
+  - caskroom/cask
+  - caskroom/fonts
+  - homebrew/binary
+  - homebrew/dupes
+  - homebrew/php
+  - homebrew/versions
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - arduino
+  - atom
+  - cyberduck
+  - docker
+  - dropbox
+  - etcher
+  - firefox
+  - flux
+  - font-arvo
+  - font-roboto-mono
+  - font-source-code-pro
+  - github-desktop
+  - gitkraken
+  - gitter
+  - google-chrome
+  - handbrake
+  - imageoptim
+  - kap
+  - keybase
+  - licecap
+  - prepros
+  - royal-tsx
+  - slack
+  - sublime-text
+  - transmission
+  - visual-studio-code
+  - vlc
+  - xld
