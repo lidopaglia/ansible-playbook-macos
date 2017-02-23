@@ -15,7 +15,7 @@
 - name: Ensure custom Terminal profile is set as default.
   shell: "{{ item }}"
   with_items:
-    - defaults write com.apple.terminal 'Default Window Settings' -string 'Ocean Dark'
-    - defaults write com.apple.terminal 'Startup Window Settings' -string 'Ocean Dark'
+    - defaults write com.apple.terminal 'Default Window Settings' -string 'Ocean-Dark'
+    - defaults write com.apple.terminal 'Startup Window Settings' -string 'Ocean-Dark'
   changed_when: false
   when: "'Ocean-Dark' not in terminal_theme.stdout"
