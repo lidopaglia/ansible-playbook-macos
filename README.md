@@ -9,11 +9,25 @@ This is a work in progress, and is mostly a means for me to document my current 
 
 ## Installation
 
-  1. [Install Ansible](http://docs.ansible.com/intro_installation.html).
-  2. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
-  3. Clone this repository to your local drive.
+  1. Ensure Apple's command line tools are installed. These tools are required to install Ansible via `pip`:
+
+      ```
+      $ xcode-select --install
+      ```
+
+  2. Install Ansible. The [preferred way](https://docs.ansible.com/ansible/intro_installation.html#latest-releases-on-mac-osx) to install Ansible on macOS is via `pip`:
+
+      ```
+      $ sudo easy_install pip
+      ```
+
+      ```
+      $ sudo pip install ansible
+      ```
+
+  3. Clone this repository to your local drive and `cd` into it.
   4. Run `$ ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
-  5. Run `ansible-playbook main.yml -i inventory -K` inside this directory. Enter your account password when prompted.
+  5. Run `$ ansible-playbook main.yml -i inventory -K` inside this directory. Enter your account password when prompted.
 
 > Note: If some Homebrew commands fail, you might need to agree to XCode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
@@ -27,7 +41,7 @@ You can override any of the defaults configured in `default.config.yml` by creat
       - cowsay
       - git
       - go
-    
+
     mas_installed_app_ids:
       - 443987910 # 1Password
       - 498486288 # Quick Resizer
